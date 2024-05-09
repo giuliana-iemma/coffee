@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* .berkshire-swash-regular {
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+ */  
+
+/*  .montserrat-<uniquifier> {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
+
+
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --box-shadow: box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.289);
+    --main-color: #312a29;
+    --main-color-dark:rgb(49, 42, 41);
+    --text-headings: #312a29;
+    --text-headings-light: #EFF0EB;
+    --text-color: #312a29;
+    --text-color-darker: #312a29;
+    --text-color-light:#EFF0EB;
+    --bg-color: #EFF0EB;
+    --bg-color-dark: #312a29;
+    --bg-color-intermediate: #EFF0EB;
+    --bg-nav-color: #EFF0EB;
+    --box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.144);
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background-image: url(./img/fondo3.jpg);
+    background-size: cover;
+}
+
+
+main{
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+picture, video, svg, canvas{
+    max-width: 100%;
+    display: block;
+}
+
+input, button, textarea, select{
+    font: inherit;
+}
+
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+a{
+text-decoration: none;
+color: var(--text-color);
+}
+
+.container{
+    max-width: 1200px;
+    background-color:#eff0eb93 ;
+    margin: auto;
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    max-width: 1200px;
+    color: var(--text-color);   
+    background-color: var(--bg-color-dark);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+h2{
+    color:#312a29;
+}
+
+nav ul a{
+    color: var(--text-color-light)
+}
+
+nav ul a:hover{
+    font-weight: 500;
+}
+
+section{
+    margin-inline: auto;
+    max-width: 95%;
+    margin-block: 3rem;
+}
+
+.card:hover img{
+    filter: brightness(110%);
+ }
+
+#banner{
+    background-image: url(./img/fondo6.jpg);
+    background-color: #312a29b9;
+    background-blend-mode: darken;
+    display: flex;
+    z-index: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    color: var(--text-color);   
+}
+
+/* Home */
+
+#banner h1 span{
+    font-size: 8rem;
+    color: var(--text-color-light);
+}
+
+#banner p{
+    color: var(--text-color-light);
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#banner .button{
+    display: block;
+    padding:.8rem;
+    margin: 2rem;
+    background-color: var(--bg-nav-color);
+    border-radius: 1rem;
+    color: var(--text-color-darker);
+    text-align: center;
+    width: 20%;
+    margin-block: 3rem;
+}
+
+#categorias{
+    text-align: center;
+    margin-block: 4rem;
+}
+/* Categorías de productos - Home */
+.categoriasBox {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.cardCategoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding:1rem;
+    min-height: 30vh;
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+}
+
+.cardCategoria img{
+    object-fit: contain;
+    border-radius: 1rem;    
+    width: 80%;
+}
+#cafeMolido{
+    margin-inline:4rem ;
+}
+
+#cafeMolido div{
+   display: flex;
+   flex-wrap: nowrap;
+   margin-block: 1rem;
+   gap: 1rem;
+}
+
+#cafeMolido .card{
+    margin-top: 2rem;
+    position: relative;
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    width: 20%;
+}
+
+#cafeMolido .btnDetalle{  
+    position: absolute;
+    width: 90%;
+    height: 100%;
+}
+#cafeMolido div img{
+    width: 70%;
+}
+
+#cafeMolido .descripcion, #cafeMolido .info-extra, #cafeMolido .precio{
+    display: none;
+}
+
+/* Cards de productos - características generales */
+#catalogoCompleto .navCategorias ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-block: 1rem;
+}
+
+#catalogoCompleto .navCategorias ul li a{
+    display: block;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    min-width: 10rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+    font-weight: 600;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+/* Catálogo de café molido - Home */
+.catalogoMolido{
+    display: flex;
+    gap: 1rem;
+    margin-block: 5rem;
+}
+
+.catalogoMolido .descripcion{
+display: none;
+}
+
+.catalogoMolido .card .info-extra{
+    display: none;
+}
+
+.catalogoMolido .card{
+ height: auto;
+ background-color: var(--bg-color-intermediate);
+ margin-block: 2rem;
+}
+
+.catalogoMolido .card img{
+    max-width: 90%;
+    border-radius: 1rem;
+    margin-inline: auto;
+}
+
+.catalogoMolido .card:hover{
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
+}
+
+
+.catalogoMolido .info-extra .card:hover{
+display: none;}
+
+.catalogoMolido .info-tarjeta h2{
+    font-size: 1rem;
+}
+
+.catalogoMolido .card:hover .info-tarjeta h2{
+    font-size: 1rem;
+    color: var(--text-headings-light);
+}
+
+.catalogoMolido p, button{
+    display: none;
+}
+.catalogoMolido .btnDetalle{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    padding: 0px;
+    min-width: 12%;
+    height: 15vh;
+}
+
+.btnDetalle span{
+    visibility: hidden;
+}
+
+
+/* Productos */
+.btn{
+    display: block;
+    height: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
+    width:max-content ;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-inline: 1rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+
+#productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top:1rem;
+}
+
+#productos .card{
+    max-width: 15vw;
+    height: auto;
+    width: 20%;
+    /* min-height: 55vh; */
+    /* max-height: 60vh; */
+    background-color: var(--bg-color-intermediate);
+    margin-bottom: 2rem;
+    display: flex;
+    /* max-height: 35vh; */
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+#productos .card h2{
+    font-size: 1.2rem;
+    display: block;
+    max-height: 2.5rem;
+    margin-top: 1rem;
+}
+
+ #productos .card img{
+    max-width: 100%;
+   /*  max-width: 80%; */
+    border-radius: 1rem 1rem 0 0;
+    /* margin-top: -5rem; */
+   /*  margin-bottom: 3rem; */
+}
+
+#productos .info-tarjeta{
+    /* height: 40vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* min-height: 15vh; */
+    justify-content: space-around;
+    color: var(--text-color-darker);
+}
+
+#productos .descripcion{
+    min-height: 7rem;
+    text-align: center;
+    display: none;
+}
+
+#productos button{
+    display: block;
+    z-index: 2;
+}
+
+#productos .info-extra{
+    display: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--text-color-light);
+    opacity: 70%;
+}
+
+#productos .info-extra ul li{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-block:.5rem;
+}
+
+#productos .info-extra ul li span{
+    font-weight: 600;
+}
+
+#productos .precio{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#productos .card:hover{
+    background-color: var(--bg-color-dark);
+}
+
+#productos .card:hover h2{
+    color: var(--text-headings-light);
+}
+
+#productos .card:hover .precio{
+    color: var(--text-color-light);
+}
+
+#productos .card:hover .descripcion{
+    display: none;
+}
+
+#productos .card:hover .info-extra{
+    display: none;
+}
+
+#productos .btnDetalle {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    padding: 0px;
+    height: 100%;
+
+}
+
+#productos .btnDetalle span{
+    visibility: hidden;
+}
+
+#detalle-producto{
+    background-color: var(--bg-color-intermediate);
+    width: 80vw;
+    margin: auto;
+    border-radius: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-block: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#detalle-producto img{
+    max-width: 50%;
+    border-radius: 1rem;
+    margin-top: -5rem;
+    margin-bottom: 3rem;
+    margin-inline: auto;
+    
+}
+
+#productos .btn {
+    display: block;
+    margin: 1rem;
+}
+
+#contacto{
+    height: 60vh;
+    width: 80%;
+    margin: auto;
+    margin-block: 5rem;
+}
+
+
+footer{
+    background-color: var(--bg-color-dark);
+    display: flex;
+    flex-direction: column-reverse;
+    color: var(--text-color-light);
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+footer a{
+    color: var(--text-color-light);
+}
+
+.redes ul{
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+    gap: 2rem;
+}
+
+.redes ul li a{
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.redes ul li:first-of-type a{
+    background-image: url(./img/instagram.png);
+}
+
+.redes ul li:nth-of-type(2) a{
+    background-image: url(./img/facebook.png);
+}
+
+.redes ul li:last-of-type a{
+    background-image: url(./img/whatsapp.png);
+}
+
+
+.redes span{
+    display: none;
+}
