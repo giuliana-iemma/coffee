@@ -56,9 +56,10 @@ class Pasteleria {
                 //detalle.php?id=' . $cafe->id. Esto crea un enlace dinámico que lleva al usuario a la página detalle.php, pasando el ID del producto como parámetro en la URL.
                 echo '<a class="btnDetalle" href="index.php?sec=detalle&id='. $pasteleria->id.'"><span>Ver</span></a>';
                // echo '<a class="btnDetalle" href="index.php?sec=detalle&id='. $cafe->id .'><span>Ver producto</span></a>';
-                echo '<img src= "'. $pasteleria->imagen. '">';
+                echo '<img src="' . $pasteleria->imagen .'" alt="'. $pasteleria->nombre . '">';
+
                     echo '<div class="info-tarjeta">'; 
-                        echo '<h2>' . $pasteleria->nombre . '</h2>';
+                        echo '<h3>' . $pasteleria->nombre . '</h3>';
 
                         echo '<p class="descripcion">' . $pasteleria->descripcion . '</p>';
                             echo '<div class="info-extra">'; 
@@ -76,7 +77,7 @@ class Pasteleria {
 
                         echo '<p class="precio">$ ' . $pasteleria->precio . '</p>';
                         echo '<button '.'>Añadir al carrito</button>';
-                    echo '</div>';
+                   // echo '</div>';
             echo '</article>';
         }
     }
@@ -95,27 +96,36 @@ class Pasteleria {
                 //Si $producto es diferente de null es porque se encontró algo.
                 //Entonces muestro los detalles de ese producto
                // echo 'Hay algo';
-                echo '<div id="detalle-producto">'; 
-                echo '<img src= "'. $producto->imagen. '">'; 
-                echo '<h2>' . $producto->nombre . '</h2>';
-                echo '<p>' . $producto->descripcion . '</p>';
-                echo '<p>Peso: ' . $producto->peso . '</p>';
+               echo '<section id="detalle-producto">';
+               echo '<img alt="'. $producto->nombre . '"src="' . $producto->imagen. '">';
+                    echo '<div>'; 
+                       
+                      
+                        echo '<div>'; 
+                            echo '<h2>' . $producto->nombre . '</h2>';
+                            echo '<p>' . $producto->descripcion . '</p>';
+                            echo '<p>Peso: ' . $producto->peso . '</p>';
 
-                if ($producto->celiacos == true){
-                    echo '<p class="aptoCeliacos">' . '<span>Apto celíacos</span></p>';
-                } 
+                            if ($producto->celiacos == true){
+                                echo '<p class="aptoCeliacos">' . '<span>Apto celíacos</span></p>';
+                            } 
 
-                if ($producto->vegano == true){
-                    echo '<p class="vegano">' . '<span>Producto vegano</span></p>';
-                } 
-                echo '<p>Precio: $' . $producto->precio . '</p>';
-                echo '</div>';
-            } else {
-                echo '<p>Producto no encontrado</p>';
-            }
-        } else {
-            echo '<p>Id no válido</p>';
-        }
+                            if ($producto->vegano == true){
+                                echo '<p class="vegano">' . '<span>Producto vegano</span></p>';
+                            } 
+                            
+                        echo '</div>';
+                        echo '<p>Precio: $' . $producto->precio . '</p>';
+                        echo '<button>Agregar al carrito</button>';
+                    echo '</div>';
+                echo'</section>';
+
+                            } else {
+                                echo '<p>Producto no encontrado</p>';
+                            }
+                            } else {
+                                echo '<p>Id no válido</p>';
+                            }
     }
 
     public static function productoX ($id) : ?Pasteleria {

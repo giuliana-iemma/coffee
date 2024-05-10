@@ -2,6 +2,7 @@
     "cafes": [
         {
             "id": 1,
+            "categoria": "cafe",
             "nombre": "Negro",
             "descripcion": "Una clásica mezcla de espresso robusto y agua caliente. Perfecto para los amantes del café fuerte.",
             "origen": "Colombia",
@@ -15,6 +16,7 @@
 
         {
             "id": 2,
+            "categoria": "cafe",
             "nombre": "Latte",
             "descripcion": "Una deliciosa combinación de espresso suave con leche vaporizada, coronada con una capa de espuma sedosa.",
             "origen": "Brasil",
@@ -27,6 +29,7 @@
 
         {
             "id": 3,
+            "categoria": "cafe",
             "nombre": "Capuchino",
             "descripcion": "Mezcla armoniosa de espresso intenso, leche vaporizada y espuma cremosa, con toque de chocolate y canela.",
             "origen": "Brasil",
@@ -38,6 +41,7 @@
         },
         {
             "id": 4,
+            "categoria": "cafe",
             "nombre": "Capuchino Ice",
             "descripcion": "Una versión fresca y deliciosa del clásico capuchino. Espres}o suave, leche vaporizada un toque de chocolate y canela, adornado con una capa de espuma cremosa",
             "origen": "Colombia",
@@ -50,6 +54,7 @@
 
         {
             "id": 5,
+            "categoria": "cafe",
             "nombre": "Latte Helado",
             "descripcion": "Deliciosa combinación de espresso suave mezclado con leche fría y dulce de leche, servido sobre hielo.",
             "origen": "Brazil",
@@ -58,7 +63,73 @@
             "tipoDeGrano": "Molido fino",
             "imagen": "./img/cafe/latte-ice.jpg",
             "precio": 2800
+        },
+        {
+            "id": 11,
+            "categoria": "molido",
+            "nombre": "Brasil",
+            "origen": "Colombia",
+            "descripcion": "Nuestro café molido de Brasil ofrece un sabor suave y equilibrado con notas a nueces y chocolate. Proveniente de las tierras fértiles de Brasil, este café tiene un cuerpo medio y una acidez moderada, perfecto para disfrutar en cualquier momento del día",
+            "tamano": "16oz",
+            "intensidad": "Suave",
+            "tipoDeGrano": "Molido fino",
+            "imagen": "./img/molido/brazil.png",
+            "precio": 6000
+        },
+        {
+            "id": 12,
+            "categoria": "molido",
+            "nombre": "Italia",
+            "origen": "Colombia",
+            "descripcion": "Sumérgete en la auténtica experiencia italiana con nuestro café molido de Italia. Este café oscuro y robusto presenta un sabor intenso y profundo con notas de cacao y un toque de amargor distintivo. Ideal para los amantes del espresso fuerte y aromático.",
+            "tamano": "16oz",
+            "intensidad": "Fuerte",
+            "tipoDeGrano": "Molido fino",
+            "imagen": "./img/molido/italia.png",
+            "precio": 6500  
+        },
+        
+        {
+            "id": 13,
+            "categoria": "molido",
+            "nombre": "Colombia",
+            "origen": "Colombia",
+
+            "descripcion": "Disfruta de la rica complejidad de nuestro café molido de Colombia, caracterizado por su cuerpo medio, acidez brillante y sabores vibrantes. Este café exhibe notas frutales y cítricas con un sutil dulzor, reflejando la calidad de los granos colombianos.",
+            "tamano": "16oz",
+            "intensidad": "Medio",
+            "tipoDeGrano": "Molido grueso",
+            "imagen": "./img/molido/colombia.png",
+            "precio": 5600  
+        },
+        
+        {
+            "id": 14,
+            "categoria": "molido",
+            "nombre": "Mocca",
+            "origen": "Colombia",
+            "descripcion": "Descubre la exquisita mezcla de nuestro café molido tipo Mocca, que combina granos selectos con un carácter distintivo y un aroma envolvente. Este café ofrece un equilibrio armonioso entre notas terrosas, afrutadas y un sutil toque de chocolate.",
+            "tamano": "16oz",
+            "intensidad": "Medio",
+            "tipoDeGrano": "Molido fino",
+            "imagen": "./img/molido/moka.png",
+            "precio": 6500
+        },
+        
+        {
+            "id": 15,
+            "categoria": "molido",
+            "nombre": "Intenso",
+                        "origen": "Colombia",
+
+            "descripcion": "Para los que buscan una experiencia audaz, nuestro café molido Intenso es la elección perfecta. Con un cuerpo completo y un sabor fuerte y persistente, este café se destaca por sus notas robustas y tostadas que cautivan los sentidos.",
+            "tamano": "16oz",
+            "intensidad": "Inteso",
+            "tipoDeGrano": "Molido fino",
+            "imagen": "./img/molido/intenso.png",
+            "precio": 7000
         }
+        
     ],
 
     "pasteleria": [
@@ -116,65 +187,6 @@
             "imagen": "./img/tortas/tiramisu.jpg",
             "precio": 2200  
         }
-    ],
-
-    "molido": [
-        {
-            "id": 11,
-            "nombre": "Brasil",
-            "descripcion": "Nuestro café molido de Brasil ofrece un sabor suave y equilibrado con notas a nueces y chocolate. Proveniente de las tierras fértiles de Brasil, este café tiene un cuerpo medio y una acidez moderada, perfecto para disfrutar en cualquier momento del día",
-            "cantidad": "16oz",
-            "intensidad": "Suave",
-            "celiacos": true,
-            "imagen": "./img/molido/brazil.png",
-            "precio": 6000
-        },
-        {
-            "id": 12,
-            "nombre": "Italia",
-            "descripcion": "Sumérgete en la auténtica experiencia italiana con nuestro café molido de Italia. Este café oscuro y robusto presenta un sabor intenso y profundo con notas de cacao y un toque de amargor distintivo. Ideal para los amantes del espresso fuerte y aromático.",
-            "cantidad": "16oz",
-            "intensidad": "Fuerte",
-            "celiacos": true,
-            "imagen": "./img/molido/italia.png",
-            "precio": 6500  
-        },
-        
-        {
-            "id": 13,
-            "nombre": "Colombia",
-            "descripcion": "Disfruta de la rica complejidad de nuestro café molido de Colombia, caracterizado por su cuerpo medio, acidez brillante y sabores vibrantes. Este café exhibe notas frutales y cítricas con un sutil dulzor, reflejando la calidad de los granos colombianos.",
-            "cantidad": "16oz",
-            "intensidad": "Medio",
-            "celiacos": true,
-            "imagen": "./img/molido/colombia.png",
-            "precio": 5600  
-        },
-        
-        {
-            "id": 14,
-            "nombre": "Mocca",
-            "descripcion": "Descubre la exquisita mezcla de nuestro café molido tipo Mocca, que combina granos selectos con un carácter distintivo y un aroma envolvente. Este café ofrece un equilibrio armonioso entre notas terrosas, afrutadas y un sutil toque de chocolate.",
-            "cantidad": "16oz",
-            "intensidad": "Medio",
-            "celiacos": true,
-            "imagen": "./img/molido/moka.png",
-            "precio": 6500
-        },
-        
-        {
-            "id": 15,
-            "nombre": "Intenso",
-            "descripcion": "Para los que buscan una experiencia audaz, nuestro café molido Intenso es la elección perfecta. Con un cuerpo completo y un sabor fuerte y persistente, este café se destaca por sus notas robustas y tostadas que cautivan los sentidos.",
-            "cantidad": "16oz",
-            "intensidad": "Inteso",
-            "celiacos": true,
-            "imagen": "./img/molido/intenso.png",
-            "precio": 7000
-        }
-        
-
     ]
-
 
 }

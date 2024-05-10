@@ -24,7 +24,7 @@
             $seccion = isset($_GET ['sec']) ? $_GET['sec'] : 'home';
 
             // Proporciono una lista de variables válidas para evitar que el usuario pueda cargar otras vistas 
-            $secciones_validas = ['home', 'locales', 'contacto', 'productos', 'detalle', 'filtrados'];
+            $secciones_validas = ['home', 'formulario','locales', 'contacto', 'productos', 'detalle', 'filtrados'];
 
             // in_array() comprueba si existe un valor en el array 
             if (!in_array($seccion, $secciones_validas)){
@@ -36,9 +36,13 @@
         /* Le proporciono el link para que según el sec de la url, se abra la sección correpondiente */
             require_once "views/$vista.php"
         ?>
+        
+        
     </main>
 
     <footer>
+   
+
         <div class=redes>
             <h2>Contacto</h2>
             <ul>
@@ -51,12 +55,13 @@
         <div>
         <h2>Locales</h2>
             <ul>
-                <li>Local 1</li>
-                <li>Local 1</li>
-                <li>Local 1</li>  
+                <li>Av. Callao 1256, CABA</li>
+                <li> Florida 500, CABA</li>
+                <li>Figueroa Alcorta 2300, CABAs</li>  
             </ul>
         </div>
     </footer>
     </div>
+
 </body>
 </html>

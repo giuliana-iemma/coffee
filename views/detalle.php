@@ -1,7 +1,6 @@
 <?php
 require_once "clases/Cafe.php";
 require_once "clases/Pasteleria.php";
-require_once "clases/Molido.php";
 
 
 //echo '<a class="btn" href="index.php?sec=productos">Volver a productos</a>';
@@ -17,9 +16,6 @@ $cafe = Cafe::productoX ($idProducto);
 //Obtengo el producto de Pastelería
 $pasteleria = Pasteleria::productoX($idProducto);
 //Obtengo el producto de Molido
-$molido = Molido::productoX($idProducto);
-
-
 
 if ($cafe){
   //print_r ($cafe);
@@ -28,10 +24,8 @@ if ($cafe){
   //Podría llamar a esta función obtenerProducto siempre, no?
   $producto = Pasteleria::idProducto();
   //print_r ($pasteleria);
-} else if ($molido){
-  $producto = Molido::idProducto();
-  //print_r ($molido);
-} else {
+} 
+else {
   echo 'No encontramos nada, Sorry';
 }
   //  print_r ($producto);
