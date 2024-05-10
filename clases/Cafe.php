@@ -1,14 +1,14 @@
 <?php
 class Cafe {
-        public $id;
+        private $id;
         private $nombre;
-        public $descripcion;
-        public $origen;
-        public $tamano;
-        public $intensidad;
-        public $tipoDeGrano;
-        public $imagen;
-        public $precio;
+        private $descripcion;
+        private $origen;
+        private $tamano;
+        private $intensidad;
+        private $tipoDeGrano;
+        private $imagen;
+        private $precio;
         
         //Constructor
         public function __construct ($id, $categoria,  $nombre, $descripcion, $origen, $tamano, $intensidad, $tipoDeGrano, $imagen, $precio)
@@ -27,7 +27,7 @@ class Cafe {
     
         //MÉTODOS
         public static function obtenerCafes (): array
-        {
+        {   
              //Este método devolverá un array compuesto de tantos productos como items existan en el JSON
              $catalogo =[];
     
@@ -47,11 +47,11 @@ class Cafe {
             return $catalogo;
         }
     
-            public static function catalogoCafes ()
-        {
+        /*     public static function catalogoCafes ()
+        { 
             //Este método devolverá un array compuesto de tantos productos como items existan en el JSON
     
-            $catalogo = self::obtenerCafes();
+            $catalogo = self::obtenerCafes(); 
     
             foreach ($catalogo as $cafe){
                 echo '<article class="card">';
@@ -77,9 +77,9 @@ class Cafe {
                         echo '</div>';
                 echo '</article>';
             }
-        }
+        } */
     
-        public static function catProducto ()
+       /*  public static function catProducto ()
         {
             //Obtengo el objeto de los producto que tenga esa categoria
                 $productos = self::productoXcat();
@@ -113,7 +113,7 @@ class Cafe {
             } else {
                 echo '<p>Producto no encontrado</p>';
             }
-        }   
+        }    */
         
 
         public static function productoXcat () : array
@@ -138,7 +138,7 @@ class Cafe {
                     }
                 }
                 return $filtrado;
-        } else {
+                } else {
 
             return null; }
         }
@@ -159,7 +159,8 @@ class Cafe {
             }
         }
 
-        public static function armarCard ($array){
+        public static function armarCard ($array)
+        {
             foreach ($array as $producto){
                 print_r ($array);
                 
@@ -222,11 +223,19 @@ class Cafe {
     
 
     //GETTER
+    public function getID(){
+        return $this->id;
+    }
+
     public function getNombre(){
         return $this->nombre;
     }
 
-    public function getDescipcion(){
+    public function getImagen(){
+        return $this->imagen;
+    }
+
+    public function getDescripcion(){
         return $this->descripcion;
 
     }
@@ -242,7 +251,7 @@ class Cafe {
     }
 
     public function getIntensidad(){
-        return $this->intesidad;
+        return $this->intensidad;
 
     }
 

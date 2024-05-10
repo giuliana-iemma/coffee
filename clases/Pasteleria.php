@@ -1,14 +1,14 @@
 <?php
 
 class Pasteleria {
-    public $id;
-    public $nombre;
-    public $descripcion;
-    public $peso;
-    public $celiacos;
-    public $vegano;
-    public $imagen;
-    public $precio;
+    private $id;
+    private $nombre;
+    private $descripcion;
+    private $peso;
+    private $celiacos;
+    private $vegano;
+    private $imagen;
+    private $precio;
 
 
     //Constructor
@@ -46,7 +46,7 @@ class Pasteleria {
         return $catalogo;
     }
 
-    public static function catalogoPasteleria ()
+/*     public static function catalogoPasteleria ()
     {
         //Este método devolverá un array compuesto de tantos productos como items existan en el JSON
         $catalogo = self::obtenerPasteleria();
@@ -80,9 +80,10 @@ class Pasteleria {
                    // echo '</div>';
             echo '</article>';
         }
-    }
+    } */
 
-    public static function idProducto (){
+    public static function idProducto ()
+    {
         //Verifico si se  pasó un ID en la URL
         if (isset($_GET ['id'])){
             //Si se pas+o, la obtengo
@@ -128,7 +129,8 @@ class Pasteleria {
                             }
     }
 
-    public static function productoX ($id) : ?Pasteleria {
+    public static function productoX ($id) : ?Pasteleria 
+    {
         //Proveemos como parámetro el id del objeto que identifica al producto.
         //Como tiene dos desenlaces posibles, al declarar el valor que devolverá nuestro método, utilizamos Cafe, pero le agregamos un signo de pregunta al principio (?) indicando que el valor puede ser nulo.d
 
@@ -145,6 +147,43 @@ class Pasteleria {
         //Si no lo encuentra, retorna null
         return null; 
     }
+
+        //GETTER
+        public function getID (){
+            return $this->id;
+        }
+
+        public function getNombre(){
+            return $this->nombre;
+        }
+
+        public function getImagen(){
+            return $this->imagen;
+        }
+        public function getDescripcion(){
+            return $this->descripcion;
+    
+        }
+    
+        public function getPeso(){
+            return $this->peso;
+    
+        }
+    
+        public function getCeliacos(){
+            return $this->celiacos;
+    
+        }
+
+        public function getVegano(){
+            return $this->vegano;
+    
+        }
+    
+        public function getPrecio(){
+            return $this->precio;
+    
+        }
 }
 
 ?>

@@ -57,7 +57,7 @@
             <ul>
                 <li>Av. Callao 1256, CABA</li>
                 <li> Florida 500, CABA</li>
-                <li>Figueroa Alcorta 2300, CABAs</li>  
+                <li>Figueroa Alcorta 2300, CABA</li>  
             </ul>
         </div>
     </footer>

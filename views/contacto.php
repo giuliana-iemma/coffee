@@ -20,9 +20,9 @@ echo '
             <label>Sucursal</label>
             <select  required name="sucursal">
                 <option value="" >Selecciona una sucursal</option>
-                <option value="Caballito">Microcentro</option>
-                <option value="Palermo">Palermo</option>
-                <option value="Devoto">Devoto</option>
+                <option value="Caballito">Av. Directorio 1256, CABA                </option>
+                <option value="Palermo">Florida 500, CABA                </option>
+                <option value="Devoto">Figueroa Alcorta 2300, CABA</option>
             </select>
 
             <input type="submit" value="Enviar">

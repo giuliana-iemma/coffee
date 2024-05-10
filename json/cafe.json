@@ -139,7 +139,7 @@
             "descripcion": "Con una base bien humeda y un relleno suave y cremoso, el cheesecake es una delicia irresistiblemente rica. Disfruta de su sabor a queso cremoso con toques dulces.",
             "peso": "150gr.",
             "celiacos": true,
-            "vegano": false,
+            "vegano": true,
             "imagen": "./img/tortas/cheese-cake.jpg",
             "precio": 2300     
         },
