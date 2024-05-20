@@ -22,7 +22,7 @@ if (isset($_GET ['cat'])){
 echo '<section id= "filtrados">'; 
 
 if ($catProducto == 'cafe' ){
-    echo ' <h2>Cafés</h2>';
+    echo ' <h1>Cafés</h1>';
     echo '<div>';
         echo '<div class="productos">'; 
 
@@ -35,7 +35,7 @@ if ($catProducto == 'cafe' ){
                 // echo '<a class="btnDetalle" href="index.php?sec=detalle&id='. $cafe->id .'><span>Ver producto</span></a>';
                     echo '<img alt="'.$producto->getNombre().'" src= "'. $producto->getImagen(). '">';
                         echo '<div class="info-tarjeta">'; 
-                            echo '<h2>' . $producto->getNombre() . '</h2>';
+                            echo '<h3>' . $producto->getNombre() . '</h3>';
 
                             echo '<p class="descripcion">' . $producto->getDescripcion() . '</p>';
                                 echo '<div class="info-extra">'; 
@@ -59,7 +59,7 @@ if ($catProducto == 'cafe' ){
     echo '</div>';
 
 } else if ($catProducto == 'pasteleria'){
-    echo ' <h2>Pastelería</h2>';
+    echo ' <h1>Pastelería</h1>';
     echo '<div>';    
         echo '<div class="productos">'; 
         $catalogoPasteleria = Pasteleria::obtenerPasteleria();
@@ -95,7 +95,7 @@ if ($catProducto == 'cafe' ){
             //echo '</div>';
         }
 } else if ($catProducto == 'molido'){
-    echo ' <h2>Café Molido</h2>';
+    echo ' <h1>Café Molido</h1>';
 
     echo '<div>';
     echo '<div class="productos">'; 
@@ -108,7 +108,7 @@ if ($catProducto == 'cafe' ){
             // echo '<a class="btnDetalle" href="index.php?sec=detalle&id='. $cafe->id .'><span>Ver producto</span></a>';
                 echo '<img alt="'.$producto->getNombre().'" src= "'. $producto->getImagen(). '">';
                     echo '<div class="info-tarjeta">'; 
-                        echo '<h2>' . $producto->getNombre() . '</h2>';
+                        echo '<h3>' . $producto->getNombre() . '</h3>';
 
                         echo '<p class="descripcion">' . $producto->getDescripcion() . '</p>';
                             echo '<div class="info-extra">'; 
@@ -133,7 +133,7 @@ if ($catProducto == 'cafe' ){
 
         
 } else{
-    echo '<h2>Lo sentimos mucho!</h2>
+    echo '<h1>Lo sentimos mucho!</h1>
     <p>Esta categoría no está disponible por el momento.</p>';
 }
 

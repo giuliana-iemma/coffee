@@ -1,0 +1,247 @@
+@import url('./components.css');
+@import url('./normalize.css');
+
+.container{
+    max-width: 1200px;
+    background-color: var(--bg-color) ;
+    margin: auto;
+}
+
+/* Nav general */
+
+header{
+    max-width: 1200px;
+    background-color: var(--bg-color-dark);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+/* Home */
+.banner{
+    background-image: url(../img/fondo6.jpg);
+    background-color: #312a29b9;
+    background-blend-mode: darken;
+    display: flex;
+    z-index: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    color: var(--text-color);   
+}
+
+.banner p{
+    color: var(--text-color-light);
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#historia{
+    background-image: url(../img/fondo.png);
+    background-size: contain;
+    background-color: var(--bg-color);
+    background-repeat: no-repeat;
+    background-position: right 3rem center;
+    padding: 4rem;
+    border-radius: 2rem;
+}
+
+#historia div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#categorias{
+    text-align: center;
+    margin-block: 4rem;
+}
+
+.categoriasBox {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.navCategorias ul{
+    margin-top:2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-block: 1rem;
+}
+
+.btnDetalle span{
+    visibility: hidden;
+}
+
+.btnDetalle {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+/* Productos */
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top:1rem;
+    justify-content: space-around;
+}
+
+.productos .card{
+    min-width: 16vw;
+    height: auto;
+    width: 30%;
+    position: relative;
+}
+
+/* Detalle */
+#detalle-producto h1{
+    display: none;
+}
+
+#contacto{
+    height: auto;
+    width: 80%;
+    margin: auto;
+    margin-block: 5rem;
+    background-image: url(../img/fondo7.jpg);
+    background-color: #312a295d;
+    background-blend-mode: darken;
+    background-size:cover ;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 4rem;
+}
+
+#formEnviado{
+    background-color: var(--bg-color);
+    height:auto;
+    width: 50%;
+    margin: auto;
+    margin-top: 15vh;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    justify-content: center;
+    gap: .5rem;
+    color: var(--text-color);
+    background-color: #eff0eb9a;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+
+}
+
+
+footer{
+    background-color: var(--bg-color-dark);
+    display: flex;
+    flex-direction: column-reverse;
+    color: var(--text-color-light);
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.redes ul{
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+    gap: 2rem;
+}
+
+.creator{
+    background-color: var(--bg-color-intermediate);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+}
+
+.creator img{
+    width: 250px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    
+    #banner{
+        text-align: center;
+        height: 80vh;
+        padding: 2rem;
+    }
+
+    #historia div{
+        width: 80%;
+        margin: auto;
+    }
+
+    #historia div p:last-of-type{
+        display: none;
+    }
+
+    .categoriasBox{
+        flex-direction: column;
+    }
+    
+
+    #catalogoCompleto{
+        text-align: center;
+    }
+
+    .productos{
+        flex-wrap: wrap;
+        padding-inline: 2rem;
+        justify-content: center;
+    }
+
+
+    .productos .card:hover .info-tarjeta .descripcion{
+        color: var(--bg-color)!important;
+    }
+
+    
+    #contacto{
+        height: 80vh;
+        background-image: url(img/fondo8.jpg);
+    }
+
+    #contacto form{
+        width: 100%;
+        height: 90%;
+    }
+    
+
+}

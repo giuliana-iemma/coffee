@@ -1,3 +1,5 @@
+<section id="detalle-producto">
+<h1>Detalle del producto</h1>
 <?php
 require_once "clases/Cafe.php";
 require_once "clases/Pasteleria.php";
@@ -17,7 +19,7 @@ $pasteleria = Pasteleria::productoX($idProducto);
 //Obtengo el producto de Molido
 
 if ($cafe !=null){
-    echo '<section id="detalle-producto">';
+  echo '<div class="detalle">';
       echo '<img alt="'. $cafe->getNombre() . '"src="' . $cafe->getImagen(). '">';
     
       echo '<div>';      
@@ -31,12 +33,12 @@ if ($cafe !=null){
             echo '<p><span>Tipo de grano:</span> ' . $cafe->getTipoDeGrano() . '</p>';
 
           echo '</div>';
-        echo '<p>Precio: $' . $cafe->getPrecio() . '</p>';
-        echo '<button>Agregar al carrito</button>';
+        echo '<p class="precio">$' . $cafe->getPrecio() . '</p>';
+        echo '<button class="disabled">Añadir al carrito</button>';
       echo '</div>';
-    echo'</section>';
+    echo'</div>';
 } else if ($pasteleria){
-  echo '<section id="detalle-producto">';
+  echo '<div class="detalle">';
     echo '<img alt="'. $pasteleria->getNombre() . '"src="' . $pasteleria->getImagen(). '">';
       echo '<div>'; 
         
@@ -58,10 +60,10 @@ if ($cafe !=null){
           echo '</div>';
 
         echo '</div>';
-        echo '<p>Precio: $' . $pasteleria->getPrecio() . '</p>';
-        echo '<button>Agregar al carrito</button>';
+        echo '<p class="precio">$' . $pasteleria->getPrecio() . '</p>';
+        echo '<button class="disabled">Añadir al carrito</button>';
     echo '</div>';
-   echo'</section>';
+   echo'</div>';
 
 } else {
   echo '
@@ -70,3 +72,4 @@ if ($cafe !=null){
 }
   //  print_r ($producto);
 ?>
+</section>

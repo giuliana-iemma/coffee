@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mocca Time</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <div class="container">
@@ -46,9 +46,9 @@
         <div class=redes>
             <h2>Contacto</h2>
             <ul>
-                <li><a href="#"><span>Instagram</span></a></li>
-                <li><a href="#"><span>Facebook</span></a></li>
-                <li><a href="#"><span>Whatsapp</span></a></li>
+                <li class="socialMedia"><a c href="#"><span>Instagram</span></a></li>
+                <li class="socialMedia"><a  href="#"><span>Facebook</span></a></li>
+                <li class="socialMedia"><a  href="#"><span>Whatsapp</span></a></li>
             </ul>
         </div>
 

@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --button-shadow:  1px 1px 1px 0px rgba(0, 0, 0, 0.289);
+    --main-color: #312a29;
+    --main-color-dark:rgb(49, 42, 41);
+    --text-headings: #312a29;
+    --text-headings-light: #EFF0EB;
+    --text-color: #312a29;
+    --text-color-lighter: #9a9a9a;
+    --text-color-light:#EFF0EB;
+    --bg-color: #EFF0EB;
+    --bg-color-dark: #312a29;
+    --bg-color-intermediate: #dadada;
+    --bg-nav-color: #EFF0EB;
+    --box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.144);
+}
+
+/* Headings */
+.banner h1{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color-light);
+    font-size: 6rem;
+}
+
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-color-darker);
+    font-style: normal;
+}
+
+h2{
+    display: block;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    max-height: 2.5rem;
+    margin-block: 1rem;
+}
+
+h3 {
+font-size: 1rem;
+}
+
+/* Navegación */
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul a{
+    color: var(--text-color-light)
+}
+
+    /* Navegación Estados */
+    nav ul a:hover{
+        font-weight: 500;
+    }
+    
+    nav ul a:active{
+        border-bottom: 1px solid var(--text-color-light)
+    }
+
+/* Categorías */
+.card.categoria{
+    gap: 1rem;
+    padding:1rem;
+    min-height: 30vh;
+}
+
+.card.categoria img{
+    object-fit: contain;
+    border-radius: 1rem;    
+    width: 80%;
+}
+
+.navCategorias ul li a{
+    min-width: 10rem;
+    border-radius: 2rem;
+}
+
+    /* Categorías Estados*/
+
+
+/* Cards */
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--bg-color);
+    margin-bottom: 2rem;
+}
+
+.card:hover img{
+    filter: brightness(110%);
+ }
+
+ .card img{
+    max-width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card .info-tarjeta{
+    /* height: 40vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-height: 15vh; */
+    justify-content: space-around;
+    color: var(--text-color-darker);
+}
+
+.card .descripcion{
+    min-height: 7rem;
+    text-align: center;
+    display: block;
+    margin-block: 1rem;
+    margin-inline: 2rem;
+}
+
+.card button{
+    z-index: 2;
+}
+
+.card .info-extra{
+    display: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--text-color-light);
+    opacity: 70%;
+}
+
+.card .info-extra ul li{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-block:.5rem;
+}
+
+.card .info-extra ul li span{
+    font-weight: 600;
+}
+
+.card .precio{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+
+    /* Cards Estados */
+    .card:hover{
+        background-color: var(--bg-color-dark);
+        color: var(--text-color-light);
+    }
+    
+/* Detalle Producto */
+.detalle{
+    background-color: var(--bg-color-intermediate);
+    width: 70vw;
+    margin: auto;
+    border-radius: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-block: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.detalle div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.detalle img{
+    width: 40%;
+    height: 100%;
+ border-radius: 1rem;
+ }
+
+ .especificaciones{
+    display: flex;
+    flex-direction: row!important;
+    justify-content: left!important;
+    width: 24px;
+}
+
+.vegano span, .aptoCeliacos span{
+    display: none;
+ }
+ 
+ .vegano{
+    width: 2rem;
+    height: 2rem;
+    background-image: url(./img/vegano.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-block: .5rem;
+    }
+    
+    .aptoCeliacos{
+    width: 2rem;
+    height: 2rem;
+    background-image: url(./img/sintacc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-block: .5rem;
+    }
+ 
+ .detalle .precio{
+ font-size: 2rem;
+ margin-block: 2rem;
+ font-weight: 600;
+ color: var(--text-color);
+ }
+
+
+/* Botones */
+button, .button{
+    display: block;
+    padding:.8rem;
+    border-radius: 1rem;
+    border: var(--main-color) 1px solid;
+    margin-block: 2rem;
+    text-align: center;
+    background-color: var(--bg-nav-color);
+    color: var(--text-color);
+    box-shadow: var(--button-shadow);
+}
+
+    /* Botones Estados */
+    button:hover, .button:hover {
+        font-weight: 600;
+    }
+
+    button:active, .button:active{
+    box-shadow: none;
+    }
+
+    button.disabled, .button.disabled{
+        color: var(--text-color-lighter);
+        border-color: var(--text-color-lighter);
+        background-color: var(--bg-color-intermediate);
+        box-shadow: none;
+    }
+
+    button:hover.disabled , .button:hover.disabled{
+        font-weight: 400;
+    }
+
+.button.dark{
+    display: block;
+padding: 1rem;
+background-color: var(--bg-color-dark);
+color: var(--text-color-light);
+border-radius: 2rem;
+}
+
+a:hover{
+    font-weight: 600;
+}
+
+/* Redes Footer */
+.socialMedia a{
+    color: var(--text-color-light);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+}
+
+.socialMedia a span{
+    display: none;  
+}
+
+.socialMedia:first-of-type a{
+    background-image: url(../img/instagram.png);
+}
+
+.socialMedia:nth-of-type(2) a{
+    background-image: url(../img/facebook.png);
+}
+
+.socialMedia:last-of-type a{
+    background-image: url(../img/whatsapp.png);
+}
+
+/* Formulario */
+form input{
+    height: 2.5rem;
+    border-radius: 1rem;
+    border: none;
+    color: var(--text-color);
+    padding-left: 1rem;
+}
+
+form input:focus{
+    border: 1px solid var(--main-color);
+}
+
+form label{
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+form select{
+height: 2.5rem;
+border-radius: 1rem;
+    border: none;
+    padding-left: 1rem;
+}
+
+form input[type=submit]{
+    margin-top:3rem;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    h2,p{
+        text-align: center;
+    }
+
+    /* Categorías */
+    .card.categoria{
+        min-height: fit-content;
+        padding: 1.5rem;
+    }
+    
+    .card.categoria h3{
+        font-size: 2rem;
+    }
+
+    .navCategorias ul{
+        width: 80%;
+        flex-wrap: wrap;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+
+    .navCategorias .button{
+        font-size: .8rem;
+        padding: .3rem!important;
+        min-width: auto!important;
+    }
+
+    .card{
+        margin-top:1rem !important;
+        width: 30%;
+        height: fit-content;
+        padding: 1rem;
+    }
+
+    /* Form */
+
+    input{
+        padding: 1rem;
+    }
+    input[type=submit]{
+        padding-top: .75rem;
+        padding-bottom: 1.5rem;
+    }
+}

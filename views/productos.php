@@ -1,22 +1,24 @@
+
+<section id="catalogoCompleto">
+
+    <div class="navCategorias">
+        <ul>
+            <li><a class="button" href="index.php?sec=filtrados&cat=cafe">Café</a></li>
+            <li><a class="button" href="index.php?sec=filtrados&cat=pasteleria">Pastelería</a></li>
+            <li><a class="button" href="index.php?sec=filtrados&cat=molido">Café Molido</a></li>
+            <li><a class="button" href="index.php?sec=productos">Ver todos</a></li>       
+        </ul>
+    </div>
+
+    <h1>Todos los productos</h1>
+
+    <div>
+        <div class="productos">
+
+
 <?php
 require_once "clases/Cafe.php";
 require_once "clases/Pasteleria.php";
-
-echo '<section id="catalogoCompleto">';
-
-    echo'<div class="navCategorias">
-        <ul>
-            <li><a href="index.php?sec=filtrados&cat=cafe">Café</a></li>
-            <li><a href="index.php?sec=filtrados&cat=pasteleria">Pastelería</a></li>
-            <li><a href="index.php?sec=filtrados&cat=molido">Café Molido</a></li>
-            <li><a href="index.php?sec=productos">Ver todos</a></li>       
-             </ul>
-    </div>';
-    
-    echo '<h2>Todos los productos</h2>';
-
-    echo '<div>';
-        echo '<div class="productos">'; 
 
     //Obtengo el array devuelto por la función obtenerCafes
     $listaCafes = Cafe::obtenerCafes();
@@ -43,7 +45,7 @@ echo '<section id="catalogoCompleto">';
                         echo '</div>';
 
                     echo '<p class="precio">$ ' . $cafe->getPrecio() . '</p>';
-                    echo '<button '.'>Añadir al carrito</button>';
+                    echo '<button class="disabled"'.'>Añadir al carrito</button>';
                 echo '</div>';
         echo '</article>';
     }
@@ -81,14 +83,14 @@ echo '<section id="catalogoCompleto">';
                             echo '</div>';
 
                         echo '<p class="precio">$ ' . $pasteleria->getPrecio() . '</p>';
-                        echo '<button '.'>Añadir al carrito</button>';
+                        echo '<button class="disabled"'.'>Añadir al carrito</button>';
                    // echo '</div>';
             echo '</article>';
         }
-           // $catalogoPasteleria = Pasteleria::catalogoPasteleria();
-        echo '</div>';
-    echo '</div>';
-echo '</section>'
+           
+ 
 ?>
 
-
+</div>
+</div>
+</section>

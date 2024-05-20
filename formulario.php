@@ -29,7 +29,7 @@ echo '<p>Correo electrónico: ' . $email . '</p>';
 echo '<p>Fecha de la reserva: ' . $fecha . '</p>';
 echo '<p>Sucursal: ' . $sucursal . '</p>';
 
-echo '<a href=index.php?sec=home>Volver al inicio</a>';
+echo '<a class="button dark" href=index.php?sec=home>Volver al inicio</a>';
 
 echo '</section>';
 
